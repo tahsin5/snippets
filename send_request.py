@@ -33,6 +33,7 @@ class ProcessRequest:
             if response.status_code != 200:                                     
                 raise Exception(f'{response.status_code} error: {response.reason}')                                     
             return json.loads(response.content.decode('utf-8'))
+            
         
         except Exception as e:
             raise Exception(e)
